@@ -1,0 +1,16 @@
+[
+    {
+      "title": "Inovasi Terbaru di Dunia Fintech",
+      "content": "Startup finansial teknologi lokal mulai menunjukkan...",
+      "imgUrl": "https://example.com/images/fintech.jpg",
+      "categoryId": 3,
+      "authorId": 1
+    },
+    {
+      "title": "Panduan Pola Hidup Sehat Modern",
+      "content": "Kesehatan menjadi prioritas utama di era digital...",
+      "imgUrl": "/uploads/health-guide.jpg",
+      "categoryId": 6,
+      "authorId": 1
+    }
+  ]
