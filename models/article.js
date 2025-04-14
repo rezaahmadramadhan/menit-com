@@ -37,6 +37,10 @@ module.exports = (sequelize, DataTypes) => {
     imgUrl: DataTypes.STRING,
     categoryId: {
       type: DataTypes.INTEGER,
+      references: {
+        model: "Categories",
+        key: "id"
+      },
       allowNull: false,
       validate: {
         notNull: {
@@ -49,6 +53,10 @@ module.exports = (sequelize, DataTypes) => {
     },
     authorId: {
       type: DataTypes.INTEGER,
+      references: {
+        model: "Users",
+        key: "id"
+      },
       allowNull: false,
       validate: {
         notNull: {
