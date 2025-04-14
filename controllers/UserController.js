@@ -1,3 +1,5 @@
+const { comparePassword } = require("../helpers/bcrypt")
+const { signToken } = require("../helpers/jwt")
 const { User } = require("../models")
 
 class UserController {
@@ -13,6 +15,48 @@ class UserController {
                 return res.status(400).json({ message: error.errors[0].message });
             }
     
+            res.status(500).json({ message: "Internal Server Error" })
+        }
+    }
+
+    static async login(req, res) {
+        try {
+            const {email, password} = req.body
+
+            if (!email) {
+                throw { name: "BadRequest", message: "Email is required" }
+            }
+    
+            if (!password) {
+                throw { name: "BadRequest", message: "Password is required" }
+            }
+
+            const user = await User.findOne({
+                where: { email }
+            })
+
+            if (!user) {
+                throw { name: "Unauthorized", message: "Invalid email/password" }
+            }
+
+            const isValid = comparePassword(password, user.password)
+            
+            if (!isValid) {
+                throw { name: "Unauthorized", message: "Invalid email/password" }
+            }
+
+            const access_token = signToken({ id: user.id, email: user.email, role: user.role })
+
+            res.status(200).json({ access_token })
+        } catch (error) {
+            if (error.name === "BadRequest") {
+                return res.status(400).json({ message: error.message })
+            }
+
+            if (error.name === "Unauthorized") {
+                return res.status(401).json({ message: error.message })
+            }
+            
             res.status(500).json({ message: "Internal Server Error" })
         }
     }
