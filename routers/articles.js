@@ -6,6 +6,7 @@ articles.post('/', articleController.createArticle)
 articles.get('/', articleController.getArticle)
 articles.get('/:id', articleController.getArticleById)
 articles.put('/:id', articleController.updateArticleById)
+articles.delete('/:id', articleController.deleteArticleById)
 
 
 module.exports = articles
