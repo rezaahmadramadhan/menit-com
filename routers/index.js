@@ -7,6 +7,7 @@ router.get('/', HomeController.getHello)
 router.use('/articles', require("./articles"))
 router.use('/categories', require("./categories"))
 router.use('/pub', require("./public"))
+router.use('/', require("./auth"))
 
 
 module.exports = router
