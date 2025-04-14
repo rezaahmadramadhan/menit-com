@@ -19,17 +19,50 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       validate: {
         notNull: {
-          msg: "Category Name is required"
+          msg: "Title is required"
         },
         notEmpty: {
-          msg: "Category Name is required"
+          msg: "Title is required"
         }
       }
     },
-    content: DataTypes.TEXT,
+    content: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      validate: {
+        notNull: {
+          msg: "Content is required"
+        },
+        notEmpty: {
+          msg: "Content is required"
+        }
+      }
+    },
     imgUrl: DataTypes.STRING,
-    categoryId: DataTypes.INTEGER,
-    authorId: DataTypes.INTEGER
+    categoryId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        notNull: {
+          msg: "Category Id is required"
+        },
+        notEmpty: {
+          msg: "Category Id is required"
+        }
+      }
+    },
+    authorId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        notNull: {
+          msg: "Author Id is required"
+        },
+        notEmpty: {
+          msg: "Author Id is required"
+        }
+      }
+    }
   }, {
     sequelize,
     modelName: 'Article',
