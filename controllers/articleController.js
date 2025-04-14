@@ -5,11 +5,13 @@ class articleController {
     static async createArticle(req, res) {
         try {
             const article = await Article.create(req.body)
+            
             res.status(201).json(article)
         } catch (error) {
             if (error.name === "SequelizeValidationError") {
                 return res.status(400).json({ message: error.errors[0].message })
             }
+
             res.status(500).json({ message: "Internal Server Error" })
         }
     }
@@ -49,6 +51,7 @@ class articleController {
                     message: error.message
                 })
             }
+
             res.status(500).json({ message: "Internal Server Error" })
         }
     }
@@ -99,6 +102,7 @@ class articleController {
             }
 
             article.destroy()
+
             res.status(200).json({
                 message: `<${article.title}> success to delete`
             })
