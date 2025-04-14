@@ -1,0 +1,14 @@
+[
+    {
+      "id": 1,
+      "name": "Politik"
+    },
+    {
+      "id": 2,
+      "name": "Ekonomi"
+    },
+    {
+        "id": 3,
+        "name": "Olahraga"
+    }
+  ]
