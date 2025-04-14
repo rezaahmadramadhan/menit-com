@@ -4,5 +4,7 @@ const router = express.Router()
 
 router.get('/', homeController.getHello)
 
+router.use('/articles', require("./articles"))
+
 
 module.exports = router
