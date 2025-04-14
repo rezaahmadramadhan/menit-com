@@ -1,3 +1,4 @@
+const { where } = require("sequelize")
 const { Article, User} = require("../models")
 
 class articleController {
@@ -48,6 +49,39 @@ class articleController {
                     message: error.message
                 })
             }
+            res.status(500).json({ message: "Internal Server Error" })
+        }
+    }
+
+    static async updateArticleById(req, res) {
+        try {
+            const { id } = req.params
+            const article = await Article.findByPk(+id)
+
+            if(!article) {
+                throw {
+                    name: "NotFound",
+                    message: `Movie with ID ${id} not found`
+                }
+            }
+
+            const [, [updatedArticle]] = await Article.update(req.body, {
+                where: {id},
+                returning: true
+            })
+            
+            res.status(200).json(updatedArticle)
+        } catch (error) {
+            if (error.name === "NotFound") {
+                return res.status(404).json({
+                    message: error.message
+                })
+            }
+
+            if (error.name === "SequelizeValidationError") {
+                return res.status(400).json({ message: error.errors[0].message })
+            }
+            
             res.status(500).json({ message: "Internal Server Error" })
         }
     }
