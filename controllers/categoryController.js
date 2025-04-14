@@ -1,5 +1,5 @@
 const { Category } = require("../models")
-class categoryController {
+class CategoryController {
     static async createCategory(req, res) {
         try {
             const category = await Category.create(req.body)
@@ -58,4 +58,4 @@ class categoryController {
     }
 }
 
-module.exports = categoryController
+module.exports = CategoryController

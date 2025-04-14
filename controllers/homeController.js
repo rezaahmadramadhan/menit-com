@@ -1,4 +1,4 @@
-class homeController {
+class HomeController {
     static async getHello(req, res) {
         try {
             res.json({ message: "Hello World!" })
@@ -8,4 +8,4 @@ class homeController {
     }
 }
 
-module.exports = homeController
+module.exports = HomeController

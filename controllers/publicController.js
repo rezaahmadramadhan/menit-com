@@ -1,6 +1,6 @@
 const { Article } = require("../models")
 
-class publicController {
+class PublicController {
     static async getPubArticle(req, res) {
         try {
             const article = await Article.findAll()
@@ -36,4 +36,4 @@ class publicController {
     }
 }
 
-module.exports = publicController
+module.exports = PublicController

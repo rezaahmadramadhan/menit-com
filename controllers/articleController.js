@@ -1,7 +1,7 @@
 const { where } = require("sequelize")
 const { Article, User} = require("../models")
 
-class articleController {
+class ArticleController {
     static async createArticle(req, res) {
         try {
             const article = await Article.create(req.body)
@@ -118,4 +118,4 @@ class articleController {
     }
 }
 
-module.exports = articleController
+module.exports = ArticleController
