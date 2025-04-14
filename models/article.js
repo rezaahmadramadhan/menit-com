@@ -14,7 +14,13 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Article.init({
-    title: DataTypes.STRING,
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        
+      }
+    },
     content: DataTypes.TEXT,
     imgUrl: DataTypes.STRING,
     categoryId: DataTypes.INTEGER,
