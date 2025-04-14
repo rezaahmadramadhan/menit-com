@@ -1,28 +1,27 @@
-{
-    "categories": [
-      {
+[
+    {
         "name": "Politik"
-      },
-      {
+    },
+    {
         "name": "Ekonomi"
-      },
-      {
+    },
+    {
         "name": "Teknologi"
-      },
-      {
+    },
+    {
         "name": "Olahraga"
-      },
-      {
+    },
+    {
         "name": "Hiburan"
-      },
-      {
+    },
+    {
         "name": "Kesehatan"
-      },
-      {
+    },
+    {
         "name": "Pendidikan"
-      },
-      {
+    },
+    {
         "name": "Lingkungan"
-      }
-    ]
-  }
+    }
+]
+  

@@ -3,19 +3,19 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    const users = require("../data/user.json", "utf-8").map(el => {
+    const users = require("../data/user.json").map(el => {
       delete el.id,
       el.createdAt = el.updatedAt = new Date()
       return el
     })
 
-    const categories = require("../data/category.json", "utf-8").map(el => {
+    const categories = require("../data/category.json").map(el => {
       delete el.id,
       el.createdAt = el.updatedAt = new Date()
       return el
     })
     
-    const articles = require("../data/article.json", "utf-8").map(el => {
+    const articles = require("../data/article.json").map(el => {
       delete el.id,
       el.createdAt = el.updatedAt = new Date()
       return el
