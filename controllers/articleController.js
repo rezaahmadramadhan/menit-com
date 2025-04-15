@@ -4,7 +4,9 @@ const { Article, User} = require("../models")
 class ArticleController {
     static async createArticle(req, res, next) {
         try {
-            const article = await Article.create(req.body)
+            const newBody =  {...req.body}
+            newBody.authorId = req.user.id
+            const article = await Article.create(newBody)
             
             res.status(201).json(article)
         } catch (error) {

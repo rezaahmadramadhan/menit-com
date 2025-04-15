@@ -11,7 +11,7 @@ function errorHandler (error, req, res, next) {
         return res.status(401).json({ message: error.message })
     }
 
-    if (err.name === "Forbidden") {
+    if (error.name === "Forbidden") {
         return res.status(403).json({ message: err.message })
     }
 

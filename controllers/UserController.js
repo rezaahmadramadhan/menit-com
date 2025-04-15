@@ -38,7 +38,6 @@ class UserController {
             const isValid = comparePassword(password, user.password)
             
             if (!isValid) {
-                
                 throw { name: "Unauthorized", message: "Invalid email/password" }
             }
 
