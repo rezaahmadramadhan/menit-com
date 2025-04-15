@@ -3,8 +3,8 @@ const PublicController = require('../controllers/publicController');
 const public = express.Router()
 
 public.get('/', PublicController.getHome)
-public.get('/articles', PublicController.getPubArticle)
-public.get('/articles/:id', PublicController.getPubArticleById)
+public.get('/pub/articles', PublicController.getPubArticle)
+public.get('/pub/articles/:id', PublicController.getPubArticleById)
 
 
 module.exports = public
