@@ -18,6 +18,8 @@ class ArticleController {
 
     static async getArticle(req, res) {
         try {
+            console.log("test");
+            
             const article = await Article.findAll({
                 include: {
                     model: User,
@@ -29,6 +31,8 @@ class ArticleController {
 
             res.status(200).json(article)
         } catch (error) {
+            console.log(error);
+            
             res.status(500).json({ message: "Internal Server Error" })
         }
     }

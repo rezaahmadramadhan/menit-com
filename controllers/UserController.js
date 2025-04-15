@@ -22,6 +22,8 @@ class UserController {
     static async login(req, res) {
         try {
             const {email, password} = req.body
+            console.log(req.body);
+            
 
             if (!email) {
                 throw { name: "BadRequest", message: "Email is required" }
@@ -32,16 +34,20 @@ class UserController {
             }
 
             const user = await User.findOne({
-                where: { email }
+                where: { email: email }
             })
+            console.log(user);
+            
 
             if (!user) {
+                // console.log("test");
                 throw { name: "Unauthorized", message: "Invalid email/password" }
             }
 
             const isValid = comparePassword(password, user.password)
             
             if (!isValid) {
+                
                 throw { name: "Unauthorized", message: "Invalid email/password" }
             }
 
