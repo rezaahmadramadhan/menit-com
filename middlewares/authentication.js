@@ -15,14 +15,14 @@ async function authentication(req, res, next) {
         const tokenValue = rawToken[1]
 
         if (tokenType !== "Bearer" || !tokenValue) {
-            throw { name: "Unauthorized", message: "Invalid Token" }
+            throw { name: "Unauthorized", message: "Unauthorized Error" }
         }
 
         const result = verifyToken(tokenValue)
         const user = await User.findByPk(result.id)
 
         if (!user) {
-            throw { name: "Unauthorized", message: "Invalid Token" }
+            throw { name: "Unauthorized", message: "Unauthorized Error" }
         }
         
         req.user = {id: user.id, role: user.role}

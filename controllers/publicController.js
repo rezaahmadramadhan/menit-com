@@ -1,6 +1,14 @@
 const { Article } = require("../models")
 
 class PublicController {
+    static async getHome(req, res, next) {
+        try {
+            res.json({ message: "Welcome Home" })
+        } catch (error) {
+            next(error)
+        }
+    }
+
     static async getPubArticle(req, res, next) {
         try {
             const article = await Article.findAll()

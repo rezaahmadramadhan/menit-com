@@ -10,10 +10,10 @@ function onlyAdmin(req, res, next) {
     }
 }
 
-function authAdmin(req, res, next) {
+async function authAdmin(req, res, next) {
     try {
         const { id } = req.params
-        const article = Article.findByPk(+id)
+        const article = await Article.findByPk(+id)
 
         if (!article) throw { name: "NotFound", message: `Article with ${id} not found`}
 
