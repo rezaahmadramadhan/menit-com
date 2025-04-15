@@ -10,7 +10,7 @@ articles.post('/', ArticleController.createArticle)
 articles.get('/', ArticleController.getArticle)
 articles.get('/:id', ArticleController.getArticleById)
 articles.put('/:id', authAdmin, ArticleController.updateArticleById)
-articles.patch('/:id/img-url', authAdmin, ArticleController.updateArticleById)
+articles.patch('/:id/img-url', authAdmin, upload.single('imgUrl'), ArticleController.updateArticleCoverById)
 articles.delete('/:id', authAdmin, ArticleController.deleteArticleById)
 
 

@@ -1,5 +1,11 @@
 const { where } = require("sequelize")
 const { Article, User} = require("../models")
+const cloudinary = require('cloudinary').v2
+cloudinary.config({ 
+    cloud_name: 'dz7yyuyny', 
+    api_key: '363358768675192', 
+    api_secret: 'mVh8x62fUBynU7_786HdoYh1JKU'
+});
 
 class ArticleController {
     static async createArticle(req, res, next) {
@@ -66,6 +72,27 @@ class ArticleController {
             })
             
             res.status(200).json(updatedArticle)
+        } catch (error) {
+            next(error)
+        }
+    }
+
+    static async updateArticleCoverById(req, res, next) {
+        try {
+            const {id} = req.params
+            const {mimetype, buffer} = req.file
+
+            const article = await Article.findByPk(+id)
+            
+            if (!article) throw {name: "NotFound", message: `Article with ID ${id} not found`}
+            
+            const dataBuffer = buffer.toString('base64')
+            const dataURI = `data:${mimetype};base64,${dataBuffer}`
+            const {secure_url} = await cloudinary.uploader.upload(dataURI)
+            
+            article.update({imgUrl: secure_url})            
+            
+            res.status(200).json({message: `Cover Article ${article.title} success to update`})
         } catch (error) {
             next(error)
         }
