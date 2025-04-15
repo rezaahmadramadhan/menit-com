@@ -3,7 +3,7 @@ const { signToken } = require("../helpers/jwt")
 const { User } = require("../models")
 
 class UserController {
-    static async addUser(req, res) {
+    static async addUser(req, res, next) {
         try {
             const user = await User.create(req.body)
             const result = user.toJSON()
@@ -11,19 +11,13 @@ class UserController {
             
             res.status(201).json(result)
         } catch (error) {
-            if (error.name === 'SequelizeValidationError' || error.name === "SequelizeUniqueConstraintError") {
-                return res.status(400).json({ message: error.errors[0].message });
-            }
-    
-            res.status(500).json({ message: "Internal Server Error" })
+            next(error)
         }
     }
 
-    static async login(req, res) {
+    static async login(req, res, next) {
         try {
             const {email, password} = req.body
-            console.log(req.body);
-            
 
             if (!email) {
                 throw { name: "BadRequest", message: "Email is required" }
@@ -34,13 +28,10 @@ class UserController {
             }
 
             const user = await User.findOne({
-                where: { email: email }
+                where: { email }
             })
-            console.log(user);
-            
 
             if (!user) {
-                // console.log("test");
                 throw { name: "Unauthorized", message: "Invalid email/password" }
             }
 
@@ -55,15 +46,7 @@ class UserController {
 
             res.status(200).json({ access_token })
         } catch (error) {
-            if (error.name === "BadRequest") {
-                return res.status(400).json({ message: error.message })
-            }
-
-            if (error.name === "Unauthorized") {
-                return res.status(401).json({ message: error.message })
-            }
-            
-            res.status(500).json({ message: "Internal Server Error" })
+            next(error)
         }
     }
 }

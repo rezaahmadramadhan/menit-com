@@ -1,17 +1,17 @@
 const { Article } = require("../models")
 
 class PublicController {
-    static async getPubArticle(req, res) {
+    static async getPubArticle(req, res, next) {
         try {
             const article = await Article.findAll()
 
             res.status(200).json(article)
         } catch (error) {
-            res.status(500).json({ message: "Internal Server Error" })
+            next(error)
         }
     }
 
-    static async getPubArticleById(req, res) {
+    static async getPubArticleById(req, res, next) {
         try {
             const { id } = req.params
             const article = await Article.findByPk(+id)
@@ -25,13 +25,7 @@ class PublicController {
 
             res.status(200).json(article)
         } catch (error) {
-            if (error.name === "NotFound") {
-                return res.status(404).json({
-                    message: error.message
-                })
-            }
-            
-            res.status(500).json({ message: "Internal Server Error" })
+            next(error)
         }
     }
 }

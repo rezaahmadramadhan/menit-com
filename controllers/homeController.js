@@ -1,9 +1,9 @@
 class HomeController {
-    static async getHello(req, res) {
+    static async getHello(req, res, next) {
         try {
             res.json({ message: "Hello World!" })
         } catch (error) {
-            
+            next(error)
         }
     }
 }

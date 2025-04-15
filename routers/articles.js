@@ -1,10 +1,9 @@
 const express = require('express');
 const ArticleController = require('../controllers/ArticleController');
-const authentication = require('../middlewares/authentication');
+const onlyAdmin = require('../middlewares/authorization');
 const articles = express.Router()
 
-articles.use(authentication)
-
+articles.use(onlyAdmin)
 articles.post('/', ArticleController.createArticle)
 articles.get('/', ArticleController.getArticle)
 articles.get('/:id', ArticleController.getArticleById)
