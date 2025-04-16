@@ -1,10 +1,11 @@
 const { where } = require("sequelize")
 const { Article, User} = require("../models")
 const cloudinary = require('cloudinary').v2
+
 cloudinary.config({ 
-    cloud_name: 'dz7yyuyny', 
-    api_key: '363358768675192', 
-    api_secret: 'mVh8x62fUBynU7_786HdoYh1JKU'
+    cloud_name: process.env.CLOUD_NAME, 
+    api_key: process.env.API_KEY, 
+    api_secret: process.env.API_SECRET
 });
 
 class ArticleController {
