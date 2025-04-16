@@ -81,6 +81,9 @@ class ArticleController {
     static async updateArticleCoverById(req, res, next) {
         try {
             const {id} = req.params
+            // console.log(req.file);
+            if (!req.file) throw {name: "BadRequest", message: `File not found`}
+            
             const {mimetype, buffer} = req.file
 
             const article = await Article.findByPk(+id)
