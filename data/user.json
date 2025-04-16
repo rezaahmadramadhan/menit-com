@@ -1,9 +1,17 @@
 [
     {
-        "username": "reza",
-        "email": "reza@gmail.com",
+        "username": "admin",
+        "email": "admin@gmail.com",
         "password": "admin",
         "role": "Admin",
+        "phoneNumber": "08123456789",
+        "address": "jaksel" 
+    },
+    {
+        "username": "staff",
+        "email": "staf@gmail.com",
+        "password": "rahasia",
+        "role": "Staff",
         "phoneNumber": "08123456789",
         "address": "jaksel" 
     }
