@@ -12,6 +12,28 @@ class CategoryController {
 
     static async getCategory(req, res, next) {
         try {
+            const { search, sort, filter, page = 1, limit = 10 } = req.query
+            const paramsQuery = { where: { } }
+            
+            if(search) {
+                paramsQuery.where.title= {[Op.iLike]: `%${search}%`}
+            }
+
+            if(sort) {
+                const order = sort[0] === "-" ? "DESC" : "ASC"
+                const colName = order === "DESC" ? sort.slice(1) : sort
+
+                paramsQuery.order = [[colName, order]]
+            }
+
+            if(filter) {
+                paramsQuery.where.categoryId= filter
+            }
+
+            paramsQuery.limit = limit
+            paramsQuery.offset = limit * (page - 1) 
+            
+            const { count, rows } = await Article.findAndCountAll(paramsQuery)
             const category = await Category.findAll()
 
             res.status(200).json(category)

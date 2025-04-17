@@ -1,6 +1,5 @@
 [
   {
-    "id": 1,
     "title": "Panduan Pola Hidup Sehat Modern",
     "content": "Kesehatan menjadi prioritas utama di era digital...",
     "imgUrl": "/uploads/health-guide.jpg",
@@ -8,7 +7,6 @@
     "authorId": 1
   },
   {
-    "id": 2,
     "title": "Tips Hidup Seimbang di Era Digital",
     "content": "Menjaga keseimbangan antara kerja dan istirahat...",
     "imgUrl": "/uploads/balanced-life.jpg",
@@ -16,7 +14,6 @@
     "authorId": 2
   },
   {
-    "id": 3,
     "title": "Rahasia Kesehatan Optimal",
     "content": "Temukan strategi menjaga stamina sepanjang hari...",
     "imgUrl": "/uploads/optimal-health.jpg",
@@ -24,7 +21,6 @@
     "authorId": 1
   },
   {
-    "id": 4,
     "title": "Mengelola Stress dengan Teknik Terbaru",
     "content": "Teknik manajemen stress berbasis penelitian terbaru...",
     "imgUrl": "/uploads/stress-management.jpg",
@@ -32,7 +28,6 @@
     "authorId": 2
   },
   {
-    "id": 5,
     "title": "Diet Sehat untuk Generasi Muda",
     "content": "Pola makan sehat yang cocok untuk gaya hidup aktif...",
     "imgUrl": "/uploads/youth-diet.jpg",
@@ -40,7 +35,6 @@
     "authorId": 1
   },
   {
-    "id": 6,
     "title": "Digital Detox untuk Kesehatan Mental",
     "content": "Cara mengurangi ketergantungan pada perangkat digital...",
     "imgUrl": "/uploads/digital-detox.jpg",
@@ -48,7 +42,6 @@
     "authorId": 2
   },
   {
-    "id": 7,
     "title": "Olahraga Efektif di Rumah",
     "content": "Rutinitas olahraga praktis tanpa alat khusus...",
     "imgUrl": "/uploads/home-workout.jpg",
@@ -56,7 +49,6 @@
     "authorId": 1
   },
   {
-    "id": 8,
     "title": "Manajemen Waktu untuk Hidup Sehat",
     "content": "Mengatur jadwal harian untuk kesehatan yang lebih baik...",
     "imgUrl": "/uploads/time-management.jpg",
@@ -64,7 +56,6 @@
     "authorId": 2
   },
   {
-    "id": 9,
     "title": "Teknologi dan Kesehatan Jiwa",
     "content": "Dampak teknologi modern terhadap kesehatan mental...",
     "imgUrl": "/uploads/tech-mental-health.jpg",
@@ -72,7 +63,6 @@
     "authorId": 1
   },
   {
-    "id": 10,
     "title": "Pola Tidur Berkualitas Tinggi",
     "content": "Rahasia mendapatkan tidur yang benar-benar restoratif...",
     "imgUrl": "/uploads/sleep-quality.jpg",
@@ -80,7 +70,6 @@
     "authorId": 2
   },
   {
-    "id": 11,
     "title": "Nutrisi untuk Kinerja Maksimal",
     "content": "Asupan makanan untuk mendukung produktivitas kerja...",
     "imgUrl": "/uploads/performance-nutrition.jpg",
@@ -88,7 +77,6 @@
     "authorId": 1
   },
   {
-    "id": 12,
     "title": "Hidup Minimalis untuk Kesehatan",
     "content": "Manfaat gaya hidup minimalis terhadap kesejahteraan...",
     "imgUrl": "/uploads/minimalist-living.jpg",
@@ -96,7 +84,6 @@
     "authorId": 2
   },
   {
-    "id": 13,
     "title": "Meditasi untuk Pemula Urban",
     "content": "Teknik relaksasi sederhana di tengah kesibukan kota...",
     "imgUrl": "/uploads/urban-meditation.jpg",
@@ -104,7 +91,6 @@
     "authorId": 1
   },
   {
-    "id": 14,
     "title": "Makanan Fungsional Modern",
     "content": "Superfood lokal dan manfaatnya bagi tubuh...",
     "imgUrl": "/uploads/functional-food.jpg",
@@ -112,7 +98,6 @@
     "authorId": 2
   },
   {
-    "id": 15,
     "title": "Kebiasaan Pagi yang Menyehatkan",
     "content": "Rutinitas pagi untuk meningkatkan energi sepanjang hari...",
     "imgUrl": "/uploads/morning-routine.jpg",
@@ -120,7 +105,6 @@
     "authorId": 1
   },
   {
-    "id": 16,
     "title": "Manajemen Postur Kerja",
     "content": "Cara duduk yang benar saat bekerja dengan komputer...",
     "imgUrl": "/uploads/posture-management.jpg",
@@ -128,7 +112,6 @@
     "authorId": 2
   },
   {
-    "id": 17,
     "title": "Detoksifikasi Digital Mingguan",
     "content": "Teknik mengurangi screen time untuk kesehatan mata...",
     "imgUrl": "/uploads/weekly-detox.jpg",
@@ -136,7 +119,6 @@
     "authorId": 1
   },
   {
-    "id": 18,
     "title": "Latihan Pernapasan Anti Stress",
     "content": "Teknik pernapasan untuk meredakan kecemasan...",
     "imgUrl": "/uploads/breathing-exercise.jpg",
@@ -144,7 +126,6 @@
     "authorId": 2
   },
   {
-    "id": 19,
     "title": "Hidup Sehat dengan Budget Minim",
     "content": "Tips menjaga kesehatan tanpa biaya mahal...",
     "imgUrl": "/uploads/budget-health.jpg",
@@ -152,7 +133,6 @@
     "authorId": 1
   },
   {
-    "id": 20,
     "title": "Efek Samping Gaya Hidup Digital",
     "content": "Mengatasi dampak negatif teknologi pada kesehatan...",
     "imgUrl": "/uploads/digital-side-effects.jpg",
@@ -160,7 +140,6 @@
     "authorId": 2
   },
   {
-    "id": 21,
     "title": "Membentuk Rutinitas Olahraga",
     "content": "Cara konsisten berolahraga untuk pemula...",
     "imgUrl": "/uploads/exercise-routine.jpg",
@@ -168,7 +147,6 @@
     "authorId": 1
   },
   {
-    "id": 22,
     "title": "Kesehatan dalam Lingkungan Urban",
     "content": "Menjaga keseimbangan hidup di tengah keramaian kota...",
     "imgUrl": "/uploads/urban-health.jpg",
