@@ -94,7 +94,7 @@ class ArticleController {
             const dataURI = `data:${mimetype};base64,${dataBuffer}`
             const {secure_url} = await cloudinary.uploader.upload(dataURI)
             
-            article.update({imgUrl: secure_url})            
+            await article.update({imgUrl: secure_url})            
             
             res.status(200).json({message: `Cover Article ${article.title} success to update`})
         } catch (error) {
