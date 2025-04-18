@@ -60,6 +60,7 @@ describe('POST /articles', () => {
         
         expect(response.status).toBe(201)
         expect(response.body).toBeInstanceOf(Object)
+        expect(response.body).toHaveProperty("id", 23)
         expect(response.body).toHaveProperty("title", article.title)
         expect(response.body).toHaveProperty("content", article.content)
         expect(response.body).toHaveProperty("imgUrl", article.imgUrl)
@@ -77,6 +78,7 @@ describe('POST /articles', () => {
             categoryId: 5,
             authorId: userAdmin.id
         }
+
         const response = await request(app)
                         .post('/articles')
                         .send(article)
@@ -93,6 +95,7 @@ describe('POST /articles', () => {
             categoryId: 5,
             authorId: userAdmin.id
         }
+
         const response = await request(app)
                         .post('/articles')
                         .send(article)
@@ -110,6 +113,7 @@ describe('POST /articles', () => {
             categoryId: 5,
             authorId: userAdmin.id
         }
+
         const response = await request(app)
                         .post('/articles')
                         .send(article)
@@ -135,6 +139,7 @@ describe('PUT /articles/:id', () => {
         
         expect(response.status).toBe(200)
         expect(response.body).toBeInstanceOf(Object)
+        expect(response.body).toHaveProperty("id", 1)
         expect(response.body).toHaveProperty("title", updatedArticle.title)
         expect(response.body).toHaveProperty("content", updatedArticle.content)
         expect(response.body).toHaveProperty("imgUrl", updatedArticle.imgUrl)
