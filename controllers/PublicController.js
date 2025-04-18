@@ -38,14 +38,10 @@ class PublicController {
 
             res.status(200).json({
                 page: +page, 
-                pageData: +limit,
+                pageData: rows.length,
                 totalData: count,
                 data: rows
             })
-
-            // data 20
-            // limit 10
-            // page 2
         } catch (error) {
             next(error)
         }

@@ -13,13 +13,13 @@ beforeAll(async () => {
 })
 
 afterAll(async () => {
-    await Category.destroy({
+    await Article.destroy({
         truncate: true,
         restartIdentity: true,
         cascade: true
-    })    
+    })   
 
-    await Article.destroy({
+    await Category.destroy({
         truncate: true,
         restartIdentity: true,
         cascade: true
@@ -64,24 +64,8 @@ describe('GET /pub/articles', () => {
         expect(response.status).toBe(200)
         expect(response.body.data).toBeInstanceOf(Array)
         expect(response.body).toHaveProperty("page", 3)
-        expect(response.body).toHaveProperty("pageData", 10)
-        expect(response.body.data[0]).toHaveProperty("title", expect.any(String))
-        expect(response.body.data[0]).toHaveProperty("content", expect.any(String))
-        expect(response.body.data[0]).toHaveProperty("imgUrl", expect.any(String))
-        expect(response.body.data[0]).toHaveProperty("categoryId", expect.any(Number))
-        expect(response.body.data[0]).toHaveProperty("authorId", expect.any(Number))
-        expect(response.body.data[0]).toHaveProperty("createdAt", expect.any(String))
-        expect(response.body.data[0]).toHaveProperty("updatedAt", expect.any(String))
-    })
-
-    test('GET /pub/articles should SUCCESS get public articles, with length data per page', async () => {
-        const response = await request(app)
-                        .get('/pub/articles?page=3&limit=10')
-        
-        expect(response.status).toBe(200)
-        expect(response.body.data).toBeInstanceOf(Array)
-        expect(response.body).toHaveProperty("page", 3)
-        expect(response.body).toHaveProperty("pageData", 10)
+        expect(response.body).toHaveProperty("pageData", 2)
+        expect(response.body).toHaveProperty("totalData", 22)
         expect(response.body.data[0]).toHaveProperty("title", expect.any(String))
         expect(response.body.data[0]).toHaveProperty("content", expect.any(String))
         expect(response.body.data[0]).toHaveProperty("imgUrl", expect.any(String))
