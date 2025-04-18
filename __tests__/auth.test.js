@@ -1,11 +1,8 @@
 require('dotenv').config();
 const request = require('supertest')
 const { test, describe, expect, beforeAll, afterAll } = require("@jest/globals")
-const {Category, Article, User} = require('../models')
 const { signToken } = require("../helpers/jwt")
 const app = require("../app");
-const categories = require("../data/category.json")
-const articles = require("../data/article.json")
 
 let userAdmin
 let userStaff
@@ -18,9 +15,6 @@ beforeAll(async () => {
 
     userStaff = await User.create({email: "testStaff@gmail.com", role: "Staff", password: "rahasia"})
     accessTokenStaff = signToken({id: userStaff.id})
-
-    await Category.bulkCreate(categories)
-    await Article.bulkCreate(articles)
 })
 
 afterAll(async () => {
@@ -29,18 +23,6 @@ afterAll(async () => {
         restartIdentity: true,
         cascade: true
     })    
-
-    await Category.destroy({
-        truncate: true,
-        restartIdentity: true,
-        cascade: true
-    })    
-
-    await Article.destroy({
-        truncate: true,
-        restartIdentity: true,
-        cascade: true
-    })   
 })
 
 describe('POST /login (Admin)', () => {

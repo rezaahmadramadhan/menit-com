@@ -273,4 +273,3 @@ describe('DELETE /articles/:id', () => {
         expect(response.body).toHaveProperty("message", `You're not authorized`)
     })
 })
-

@@ -7,6 +7,8 @@ const categories = require("../data/category.json")
 const articles = require("../data/article.json")
 
 beforeAll(async () => { 
+    await User.create({email: "testAdmin@gmail.com", role: "Admin", password: "admin"})
+    await User.create({email: "testStaff@gmail.com", role: "Staff", password: "rahasia"})
     await Category.bulkCreate(categories)
     await Article.bulkCreate(articles)
 })
@@ -22,7 +24,13 @@ afterAll(async () => {
         truncate: true,
         restartIdentity: true,
         cascade: true
-    })   
+    })
+
+    await User.destroy({
+        truncate: true,
+        restartIdentity: true,
+        cascade: true
+    })     
 })
 
 describe('GET /pub/articles', () => {
@@ -79,7 +87,7 @@ describe('GET /pub/articles', () => {
 })
 
 describe('GET /pub/articles/:id', () => {
-    test.only('GET /pub/articles/:id should SUCCESS get public detail articles', async () => {
+    test('GET /pub/articles/:id should SUCCESS get public detail articles', async () => {
         const response = await request(app)
                         .get('/pub/articles/7')
         
