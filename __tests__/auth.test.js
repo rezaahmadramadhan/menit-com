@@ -1,5 +1,6 @@
 require('dotenv').config();
 const request = require('supertest')
+const { User } = require('../models')
 const { test, describe, expect, beforeAll, afterAll } = require("@jest/globals")
 const { signToken } = require("../helpers/jwt")
 const app = require("../app");

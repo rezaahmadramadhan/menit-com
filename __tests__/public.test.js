@@ -146,4 +146,12 @@ describe('GET /pub/articles/:id', () => {
         expect(response.body).toHaveProperty("createdAt", expect.any(String))
         expect(response.body).toHaveProperty("updatedAt", expect.any(String))
     })
+
+    test('GET /pub/articles/:id should FAILED id not found', async () => {
+        const response = await request(app)
+                        .get('/pub/articles/105')
+        
+        expect(response.status).toBe(404)
+        expect(response.body).toHaveProperty("message", "Article with ID 105 not found")
+    })
 })
