@@ -551,6 +551,15 @@ _Response (404 - Not Found)_
 Description:
     Get current articles news.
 
+Request:
+
+- params:
+```json
+{
+  "id": "integer"
+}
+```
+
 _Response (200 - OK)_
 
 ```json
@@ -611,7 +620,21 @@ Request:
 - params:
 ```json
 {
-  "id": "integer"
+    "page": "integer",
+    "limit": "integer"
+}
+OR
+{
+    "sort": "id"
+}
+OR
+{
+    "sort": "-id"
+}
+OR
+{
+    "search": "string",
+    "filter": "integer"
 }
 ```
 
