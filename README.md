@@ -176,6 +176,14 @@ _Response (400 - Bad Request)_
 {
     "message": "Title is required"
 }
+OR
+{
+    "message": "Content is required"
+}
+OR
+{
+    "message": "Category Id is required"
+}
 ```
 
 ## 4. GET /articles
@@ -234,7 +242,8 @@ _Response (200 - OK)_
             "createdAt": "2025-04-16T17:51:07.112Z",
             "updatedAt": "2025-04-16T17:51:07.112Z"
         }
-    }
+    },
+    ...
 ]
 ```
 
@@ -332,6 +341,14 @@ _Response (400 - Bad Request)_
 ```json
 {
     "message": "Title is required"
+}
+OR
+{
+    "message": "Content is required"
+}
+OR
+{
+    "message": "Category Id is required"
 }
 ```
 
@@ -439,4 +456,184 @@ _Response (400 - Bad Request)_
 
 &nbsp;
 
-## 9. 
+## 9. GET /categories
+
+Description: Get all categories news
+
+Request:
+
+- headers:
+```json
+{
+  "Authorization": "Bearer <access_token>"
+}
+```
+
+_Response (200 - OK)_
+
+```json
+[
+    {
+        "id": 1,
+        "name": "Politik",
+        "createdAt": "2025-04-16T17:51:07.113Z",
+        "updatedAt": "2025-04-16T17:51:07.113Z"
+    },
+    {
+        "id": 2,
+        "name": "Ekonomi",
+        "createdAt": "2025-04-16T17:51:07.113Z",
+        "updatedAt": "2025-04-16T17:51:07.113Z"
+    },
+    ...
+]
+```
+
+&nbsp;
+
+## 10. PUT /categories/:id
+
+Description: Update categories by selected id 
+
+Request:
+
+- headers:
+```json
+{
+  "Authorization": "Bearer <access_token>"
+}
+```
+
+- params:
+```json
+{
+  "id": "integer"
+}
+```
+
+- body:
+```json
+{
+    "name": "Politik",
+}
+```
+
+_Response (200 - OK)_
+
+```json
+{
+    "id": 1,
+    "name": "Politik",
+    "createdAt": "2025-04-16T17:51:07.113Z",
+    "updatedAt": "2025-04-19T03:13:42.989Z"
+}
+```
+_Response (400 - Bad Request)_
+
+```json
+{
+    "message": "Category Name is required"
+}
+```
+
+_Response (404 - Not Found)_
+
+```json
+{
+    "message": "Category with ID 100 not found"
+}
+```
+
+&nbsp;
+
+## 11. GET /pub/articles
+
+Description:
+    Get current articles news.
+
+_Response (200 - OK)_
+
+```json
+[
+    {
+        "id": 1,
+        "title": "Panduan Pola Hidup Sehat Modern",
+        "content": "Kesehatan menjadi prioritas utama di era digital...",
+        "imgUrl": "/uploads/health-guide.jpg",
+        "categoryId": 1,
+        "authorId": 1,
+        "createdAt": "2025-04-16T17:51:07.113Z",
+        "updatedAt": "2025-04-16T17:51:07.113Z",
+        "User": {
+            "id": 1,
+            "username": "admin",
+            "email": "admin@gmail.com",
+            "role": "Admin",
+            "phoneNumber": "08123456789",
+            "address": "jaksel",
+            "createdAt": "2025-04-16T17:51:07.031Z",
+            "updatedAt": "2025-04-16T17:51:07.031Z"
+        }
+    },
+    {
+        "id": 2,
+        "title": "Tips Hidup Seimbang di Era Digital",
+        "content": "Menjaga keseimbangan antara kerja dan istirahat...",
+        "imgUrl": "/uploads/balanced-life.jpg",
+        "categoryId": 2,
+        "authorId": 2,
+        "createdAt": "2025-04-16T17:51:07.113Z",
+        "updatedAt": "2025-04-16T17:51:07.113Z",
+        "User": {
+            "id": 2,
+            "username": "staff",
+            "email": "staf@gmail.com",
+            "role": "Staff",
+            "phoneNumber": "08123456789",
+            "address": "jaksel",
+            "createdAt": "2025-04-16T17:51:07.112Z",
+            "updatedAt": "2025-04-16T17:51:07.112Z"
+        }
+    },
+    ...
+]
+```
+
+&nbsp;
+
+## 12. GET /pub/articles/:id
+
+Description:
+    Get current articles with ID in params.
+
+Request:
+
+- params:
+```json
+{
+  "id": "integer"
+}
+```
+
+_Response (200 - OK)_
+
+```json
+{
+    "id": 6,
+    "title": "Digital Detox untuk Kesehatan Mental",
+    "content": "Cara mengurangi ketergantungan pada perangkat digital...",
+    "imgUrl": "https://res.cloudinary.com/dz7yyuyny/image/upload/v1744996134/b1nkrpi0qeh5ngwewlm1.jpg",
+    "categoryId": 6,
+    "authorId": 2,
+    "createdAt": "2025-04-16T17:51:07.113Z",
+    "updatedAt": "2025-04-18T17:08:52.837Z"
+}
+```
+
+_Response (404 - Not Found)_
+
+```json
+{
+  "message": "Article with ID 100 not found"
+}
+```
