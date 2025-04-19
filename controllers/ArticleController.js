@@ -114,7 +114,7 @@ class ArticleController {
                 }
             }
 
-            article.destroy()
+            await article.destroy()
 
             res.status(200).json({
                 message: `<${article.title}> success to delete`
