@@ -637,3 +637,23 @@ _Response (404 - Not Found)_
   "message": "Article with ID 100 not found"
 }
 ```
+
+&nbsp;
+
+## Global Error
+
+_Response (401 - Unauthorized)_
+
+```json
+{
+  "message": "Invalid token"
+}
+```
+
+_Response (500 - Internal Server Error)_
+
+```json
+{
+  "message": "Internal server error"
+}
+```
