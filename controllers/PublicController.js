@@ -5,7 +5,7 @@ const { Op } = require("sequelize")
 class PublicController {
     static async getHome(req, res, next) {
         try {
-            res.json({ message: "Welcome Home" })
+            res.json({ message: "HCK82 - Reza Ahmad Ramadhan ( P2 - GC01 )" })
         } catch (error) {
             next(error)
         }
