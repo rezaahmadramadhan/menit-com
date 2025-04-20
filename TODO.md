@@ -4,7 +4,7 @@
 
 Struktur Folder:
 
-- server (PORT: 3000)
+- server (PORT: 80 || 3000)
 
 ## **W1D1**
 
