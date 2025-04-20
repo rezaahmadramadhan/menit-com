@@ -82,10 +82,6 @@ Target:
 - [x] Informasi yang diperlukan oleh user saat ingin menggunakan route/path API (seperti body, header, parameter, dll)
 - [x] Response serta status code yang akan didapatkan oleh pengguna (info, error, warning, dsb)
 
-Lebih lanjut untuk contoh, bisa dilihat di:
-
-- [Example API Documentation](https://gist.github.com/ziterz/56d2cd8b2d5f5d52101265c0182c2aff)
-
 ## **W1D2**
 
 Target:
