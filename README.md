@@ -123,10 +123,17 @@ _Response (400 - Bad Request)_
 
 ```json
 {
-  "message": "Email is required"
+    "message": "Format email wrong!"
 }
 OR
-
+{
+    "message": "Email is required"
+}
+OR
+{
+    "message": "Password is required"
+}
+OR
 {
     "message": "Invalid email/password"
 }
