@@ -1,4 +1,3 @@
-const { where } = require("sequelize")
 const { Article, User} = require("../models")
 const cloudinary = require('cloudinary').v2
 
