@@ -14,17 +14,11 @@ async function authentication(req, res, next) {
         const tokenType = rawToken[0]
         const tokenValue = rawToken[1]
 
-        
-        
         if (tokenType !== "Bearer" || !tokenValue) {
             throw { name: "Unauthorized", message: "Unauthorized Error" }
         }
-        
-        
+
         const result = verifyToken(tokenValue)
-        console.log(rawToken);
-        // console.log(result);
-        
         const user = await User.findByPk(result.id)
 
         if (!user) {
