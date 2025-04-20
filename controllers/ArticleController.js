@@ -22,6 +22,8 @@ class ArticleController {
 
     static async getArticle(req, res, next) {
         try {
+            console.log("test");
+            
             const article = await Article.findAll({
                 include: {
                     model: User,
