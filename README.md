@@ -123,10 +123,6 @@ _Response (400 - Bad Request)_
 
 ```json
 {
-    "message": "Format email wrong!"
-}
-OR
-{
     "message": "Email is required"
 }
 OR
