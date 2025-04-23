@@ -63,7 +63,20 @@ class PublicController {
     static async getPubArticleById(req, res, next) {
         try {
             const { id } = req.params
-            const article = await Article.findByPk(+id)
+            const article = await Article.findAll({
+                where: { id: +id },
+                include:[
+                    {
+                        model: User,
+                        attributes: {
+                            exclude: ['password']
+                        }
+                    },
+                    {
+                        model: Category
+                    }
+                ]
+            })
 
             if (!article) {
                 throw {
