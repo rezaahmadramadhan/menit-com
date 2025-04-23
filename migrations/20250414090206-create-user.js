@@ -12,6 +12,9 @@ module.exports = {
       username: {
         type: Sequelize.STRING
       },
+      authorImg: {
+        type: Sequelize.STRING
+      },
       email: {
         allowNull: false,
         unique: true,
