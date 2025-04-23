@@ -1,5 +1,5 @@
 const { where } = require("sequelize")
-const { Article, User } = require("../models")
+const { Article, User, Category } = require("../models")
 const { Op } = require("sequelize")
 
 class PublicController {
@@ -36,12 +36,17 @@ class PublicController {
             
             const { count, rows } = await Article.findAndCountAll({
                 paramsQuery,
-                include: {
-                    model: User,
-                    attributes: {
-                        exclude: ['password']
+                include:[
+                    {
+                        model: User,
+                        attributes: {
+                            exclude: ['password']
+                        }
+                    },
+                    {
+                        model: Category
                     }
-                }
+                ]
             });
 
             res.status(200).json({

@@ -1,26 +1,32 @@
 [
     {
-        "name": "Politik"
+        "name": "Technology"
     },
     {
-        "name": "Ekonomi"
+        "name": "Environment"
     },
     {
-        "name": "Teknologi"
+        "name": "Health"
     },
     {
-        "name": "Olahraga"
+        "name": "Business"
     },
     {
-        "name": "Hiburan"
+        "name": "Science"
     },
     {
-        "name": "Kesehatan"
+        "name": "Sports"
     },
     {
-        "name": "Pendidikan"
+        "name": "Politics"
     },
     {
-        "name": "Lingkungan"
+        "name": "Entertainment"
+    },
+    {
+        "name": "Education"
+    },
+    {
+        "name": "Culture"
     }
 ]
