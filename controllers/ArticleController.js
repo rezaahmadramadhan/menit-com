@@ -1,4 +1,4 @@
-const { Article, User} = require("../models")
+const { Article, User, Category} = require("../models")
 const cloudinary = require('cloudinary').v2
 
 cloudinary.config({ 
@@ -23,12 +23,17 @@ class ArticleController {
     static async getArticle(req, res, next) {
         try {
             const article = await Article.findAll({
-                include: {
-                    model: User,
-                    attributes: {
-                        exclude: ['password']
+                include:[
+                    {
+                        model: User,
+                        attributes: {
+                            exclude: ['password']
+                        }
+                    },
+                    {
+                        model: Category
                     }
-                }
+                ]
             })
 
             res.status(200).json(article)
