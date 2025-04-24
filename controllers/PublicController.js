@@ -14,29 +14,11 @@ class PublicController {
     static async getPubArticle(req, res, next) {
         try {
             const { search, sort, filter, page = 1, limit = 10 } = req.query
-            const paramsQuery = { where: { } }
-            
-            if(search) {
-                paramsQuery.where.title= {[Op.iLike]: `%${search}%`}
-            }
-
-            if(sort) {
-                const order = sort[0] === "-" ? "DESC" : "ASC"
-                const colName = order === "DESC" ? sort.slice(1) : sort
-
-                paramsQuery.order = [[colName, order]]
-            }
-
-            if(filter) {
-                paramsQuery.where.categoryId= filter
-            }
-
-            paramsQuery.limit = +limit
-            paramsQuery.offset = +limit * (page - 1) 
-            
-            const { count, rows } = await Article.findAndCountAll({
-                paramsQuery,
-                include:[
+            const paramsQuery = { 
+                where: {},
+                limit: +limit,
+                offset: +limit * (page - 1),
+                include: [
                     {
                         model: User,
                         attributes: {
@@ -47,8 +29,24 @@ class PublicController {
                         model: Category
                     }
                 ]
-            });
-
+            }
+            
+            if(search) {
+                paramsQuery.where.title = {[Op.iLike]: `%${search}%`}
+            }
+    
+            if(sort) {
+                const order = sort[0] === "-" ? "DESC" : "ASC"
+                const colName = order === "DESC" ? sort.slice(1) : sort
+                paramsQuery.order = [[colName, order]]
+            }
+    
+            if(filter) {
+                paramsQuery.where.categoryId = filter
+            }
+            
+            const { count, rows } = await Article.findAndCountAll(paramsQuery);
+    
             res.status(200).json({
                 page: +page, 
                 pageData: rows.length,
