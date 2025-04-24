@@ -23,6 +23,7 @@ class ArticleController {
     static async getArticle(req, res, next) {
         try {
             const article = await Article.findAll({
+                order: [["id", "ASC"]],
                 include:[
                     {
                         model: User,
