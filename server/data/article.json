@@ -1,0 +1,191 @@
+[
+  {
+    "title": "Tesla's Stock Surges After AI Investment Announcement",
+    "content": "Tesla's market value increased significantly following Elon Musk's announcement about major investments in artificial intelligence technology.",
+    "imgUrl": "https://img.etimg.com/thumb/width-1200,height-900,imgsize-40338,resizemode-75,msid-119542942/news/international/us/tesla-is-back-stock-surges-as-elon-musk-reasserts-control-surprise-all-hands-meeting-signals-bold-moves-boosting-investor-confidence.jpg",
+    "categoryId": 1,
+    "authorId": 1
+  },
+  {
+    "title": "Climate Summit Reaches Historic Agreement",
+    "content": "World leaders have reached a landmark agreement on reducing carbon emissions at the latest climate conference.",
+    "imgUrl": "https://static01.nyt.com/images/2021/11/13/climate/13cop26-briefing-finalagreement/merlin_197773308_b5c51b9a-66d5-447f-81b0-87b4ad6c51b9-videoSixteenByNine3000.jpg",
+    "categoryId": 2,
+    "authorId": 2
+  },
+  {
+    "title": "Breakthrough in Cancer Treatment Research",
+    "content": "Scientists announce promising results in early trials of a new immunotherapy treatment for various types of cancer.",
+    "imgUrl": "https://images.unsplash.com/photo-1576086213369-97a306d36557",
+    "categoryId": 3,
+    "authorId": 2
+  },
+  {
+    "title": "Global Markets Show Strong Recovery Signs",
+    "content": "Economic indicators point to robust recovery across major markets despite recent challenges.",
+    "imgUrl": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3",
+    "categoryId": 4,
+    "authorId": 1
+  },
+  {
+    "title": "SpaceX Launches Next-Gen Satellite Network",
+    "content": "Revolutionary satellite constellation promises to deliver high-speed internet to remote areas globally.",
+    "imgUrl": "https://images.unsplash.com/photo-1516849677043-ef67c9557e16",
+    "categoryId": 5,
+    "authorId": 2
+  },
+  {
+    "title": "Major League Announces Expansion Teams",
+    "content": "Professional sports league reveals plans for two new teams in emerging markets.",
+    "imgUrl": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211",
+    "categoryId": 6,
+    "authorId": 1
+  },
+  {
+    "title": "AI Art Platform Revolutionizes Digital Creation",
+    "content": "New platform allows artists to create stunning artwork using advanced AI algorithms.",
+    "imgUrl": "https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8",
+    "categoryId": 1,
+    "authorId": 1
+  },
+  {
+    "title": "Historic Peace Agreement in Middle East",
+    "content": "Regional leaders sign groundbreaking peace accord after months of negotiations.",
+    "imgUrl": "https://images.unsplash.com/photo-1447069387593-a5de0862481e",
+    "categoryId": 7,
+    "authorId": 1
+  },
+  {
+    "title": "New Battery Technology Breakthrough",
+    "content": "Revolutionary energy storage solution could transform renewable energy sector.",
+    "imgUrl": "https://images.unsplash.com/photo-1509391366360-2e959784a276",
+    "categoryId": 5,
+    "authorId": 2
+  },
+  {
+    "title": "Entertainment Awards Make History",
+    "content": "Annual awards ceremony breaks records with unprecedented diversity in winners.",
+    "imgUrl": "https://images.unsplash.com/photo-1586899028174-e7098604235b",
+    "categoryId": 8,
+    "authorId": 2
+  },
+  {
+    "title": "Virtual Reality Transforms Education",
+    "content": "New VR platform revolutionizes remote learning with immersive experiences.",
+    "imgUrl": "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d",
+    "categoryId": 9,
+    "authorId": 2
+  },
+  {
+    "title": "Ancient Royal Tomb Discovery",
+    "content": "Archaeologists uncover unprecedented historical artifacts in newly discovered tomb.",
+    "imgUrl": "https://images.unsplash.com/photo-1608425234255-96a27a6c9951",
+    "categoryId": 10,
+    "authorId": 2
+  },
+  {
+    "title": "Quantum Computing Milestone Achieved",
+    "content": "Research team demonstrates quantum supremacy with new processor design.",
+    "imgUrl": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb",
+    "categoryId": 1,
+    "authorId": 2
+  },
+  {
+    "title": "Fashion Industry Embraces Sustainability",
+    "content": "Major brands commit to zero-waste initiatives and sustainable practices.",
+    "imgUrl": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f",
+    "categoryId": 2,
+    "authorId": 1
+  },
+  {
+    "title": "Revolutionary Transport System Unveiled",
+    "content": "High-speed transportation network promises to connect major cities.",
+    "imgUrl": "https://images.unsplash.com/photo-1494522855154-9297ac14b55f",
+    "categoryId": 1,
+    "authorId": 1
+  },
+  {
+    "title": "Mental Health Treatment Breakthrough",
+    "content": "New therapy shows remarkable results in treating depression and anxiety.",
+    "imgUrl": "https://images.unsplash.com/photo-1527689368864-3a821dbccc34",
+    "categoryId": 3,
+    "authorId": 1
+  },
+  {
+    "title": "Record-Breaking Digital Art Sale",
+    "content": "NFT artwork sells for unprecedented amount at major auction.",
+    "imgUrl": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb",
+    "categoryId": 10,
+    "authorId": 2
+  },
+  {
+    "title": "Urban Farming Initiative Launches",
+    "content": "City unveils largest vertical farming project for sustainable food production.",
+    "imgUrl": "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8",
+    "categoryId": 2,
+    "authorId": 2
+  },
+  {
+    "title": "Cybersecurity Protocol Innovation",
+    "content": "New encryption method promises enhanced digital communication security.",
+    "imgUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b",
+    "categoryId": 1,
+    "authorId": 1
+  },
+  {
+    "title": "Virtual Film Festival Success",
+    "content": "Online film festival breaks attendance records with innovative platform.",
+    "imgUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728",
+    "categoryId": 8,
+    "authorId": 2
+  },
+  {
+    "title": "Space Tourism Program Launch",
+    "content": "Private company announces regular civilian space flights starting next year.",
+    "imgUrl": "https://images.unsplash.com/photo-1516849841032-87cbac4d88f7",
+    "categoryId": 5,
+    "authorId": 2
+  },
+  {
+    "title": "Mixed-Gender Sports League Forms",
+    "content": "International sports body launches innovative professional league format.",
+    "imgUrl": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211",
+    "categoryId": 6,
+    "authorId": 1
+  },
+  {
+    "title": "Solar Technology Advancement",
+    "content": "New organic materials improve solar panel efficiency dramatically.",
+    "imgUrl": "https://images.unsplash.com/photo-1509390836867-55c524f081b8",
+    "categoryId": 5,
+    "authorId": 2
+  },
+  {
+    "title": "AI Language Learning Platform",
+    "content": "Revolutionary system promises rapid language acquisition through AI.",
+    "imgUrl": "https://images.unsplash.com/photo-1580894732444-8ecded7900cd",
+    "categoryId": 9,
+    "authorId": 1
+  },
+  {
+    "title": "Global Economic Framework Agreement",
+    "content": "Leaders establish new protocols for international trade and digital currency.",
+    "imgUrl": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e",
+    "categoryId": 4,
+    "authorId": 1
+  },
+  {
+    "title": "Health Monitoring Device Breakthrough",
+    "content": "Wearable technology enables early detection of multiple conditions.",
+    "imgUrl": "https://images.unsplash.com/photo-1576671081837-49b1a991dd54",
+    "categoryId": 3,
+    "authorId": 2
+  },
+  {
+    "title": "Ancient City Discovery",
+    "content": "Archaeological team uncovers perfectly preserved ancient settlement.",
+    "imgUrl": "https://images.unsplash.com/photo-1461360228754-6e81c478b882",
+    "categoryId": 10,
+    "authorId": 2
+  }
+]

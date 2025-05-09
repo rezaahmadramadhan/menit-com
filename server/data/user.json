@@ -1,0 +1,20 @@
+[
+    {
+        "username": "Sarah Chen",
+        "authorImg": "https://randomuser.me/api/portraits/women/1.jpg",
+        "email": "admin@gmail.com",
+        "password": "admin",
+        "role": "Admin",
+        "phoneNumber": "08123456789",
+        "address": "jaksel" 
+    },
+    {
+        "username": "Michael Roberts",
+        "authorImg": "https://randomuser.me/api/portraits/men/2.jpg",
+        "email": "staff@gmail.com",
+        "password": "rahasia",
+        "role": "Staff",
+        "phoneNumber": "08123456789",
+        "address": "jaksel" 
+    }
+]
